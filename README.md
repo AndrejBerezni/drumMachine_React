@@ -1,4 +1,4 @@
-#DRUM MACHINE
+# DRUM MACHINE
 
 This is a small learning project.
 It is created as a part of requirements for earning
