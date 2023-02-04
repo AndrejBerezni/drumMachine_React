@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bgdark: #323031;
+  --bgyellow: #ffc857;
+  --textred: #db3a34
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
+
+body {
+  margin: 0;
+  background-color: var(--bgdark);
+  opacity: 1;
+  background-image: radial-gradient(#ffc857 0.5px, #323031 0.5px);
+  background-size: 10px 10px;
+}
+
+#drum-machine {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--textred);
+  border-radius: 5px;
+  padding: 1%;
+  background-color: #ffc857;
+}
+
+#display {
+  width: 70%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.padRow {
+  width: 100%;
+  height: 20%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.drum-pad {
+  height: 80%;
+  width:30%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+#display, .drum-pad {
+  border: 2px solid var(--textred);
+  background-color: var(--bgdark);
+  color: var(--textred);
+  box-shadow: 0px 5px 10px black;
+}
+
+.drum-pad:hover {
+  background-color: var(--bgyellow);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #drum-machine {
+    width: 80%;
+    left: 10%;
+  }
+  #display {
+    margin-top: 5%;
+  }
+}
+
